@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Руслан Галяутдинов](https://up.htmlacademy.ru/htmlcss/27/user/1262877).
-* Наставник: `Александр Кошара`.
+* Наставник: [Александр Кошара](https://htmlacademy.ru/profile/rednaxxxela).
 
 ---
 
