@@ -20,10 +20,15 @@
       </header>
       <main>
           <section>
-              <div>
-                  <p>Стоимость</p>
-              </div>
-              <!-- Здесь будет форма -->
+              <form oninput="priceoutput.value=price.value">
+                <div>
+                    <label for="price">Стоимость</label>
+                    0<input type="range" id="price" name="price" min="0" max="15000" step="1000">15000
+                </div>
+                <div>
+                  <output name="priceoutput"></output>
+                </div>
+              </form>
           </section>
           <section>
               <div>
