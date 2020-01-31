@@ -20,11 +20,45 @@
     </header>
     <main>
       <section>
-        <form>
+        <form method="POST">
           <div>
             <span>Стоимость</span>
             От<input type="number" name="minprice"> До<input type="number" name="maxprice">
           </div>
+          <fieldset>
+            <legend>Сетка</legend>
+            <ul>
+              <li><input type="radio" name="product-group" value="adaptive" checked>Адаптивная</li>
+              <li><input type="radio" name="product-group" value="fixed">Фиксированная</li>
+              <li><input type="radio" name="product-group" value="flexed">Резиновая</li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="advantage" id="filter-advantage">
+                <label for="advantage">Преимущества</label>
+              </li>
+              <li>
+                <input type="checkbox" name="news" id="filter-news" checked>
+                <label for="news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="gallery" id="filter-gallery">
+                <label for="gallery">Галлерея</label>
+              </li>
+              <li>
+                <input type="checkbox" name="can" id="filter-can">
+                <label for="can">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
         </form>
       </section>
       <section>
