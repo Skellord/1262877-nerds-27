@@ -28,9 +28,9 @@
           <fieldset>
             <legend>Сетка</legend>
             <ul>
-              <li><input type="radio" name="product-group" value="adaptive" checked>Адаптивная</li>
-              <li><input type="radio" name="product-group" value="fixed">Фиксированная</li>
-              <li><input type="radio" name="product-group" value="flexed">Резиновая</li>
+              <li><input type="radio" name="grid" value="adaptive" checked>Адаптивная</li>
+              <li><input type="radio" name="grid" value="fixed">Фиксированная</li>
+              <li><input type="radio" name="grid" value="flexed">Резиновая</li>
             </ul>
           </fieldset>
           <fieldset>
@@ -53,8 +53,8 @@
                 <label for="gallery">Галлерея</label>
               </li>
               <li>
-                <input type="checkbox" name="can" id="filter-can">
-                <label for="can">Корзина</label>
+                <input type="checkbox" name="cart" id="filter-cart">
+                <label for="cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
@@ -107,6 +107,7 @@
       </div>
     </footer>
     <form method="POST">
+      <button type="button">Закрыть</button>
       <h2>Напишите нам</h2>
       <p>
         <label for="user-name">Ваше имя:</label>
