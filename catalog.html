@@ -23,37 +23,39 @@
         <form method="POST">
           <div>
             <span>Стоимость</span>
-            От<input type="number" name="minprice"> До<input type="number" name="maxprice">
+            <label>
+            От<input type="text" name="minprice"> До<input type="text" name="maxprice">
+            </label>
           </div>
           <fieldset>
             <legend>Сетка</legend>
             <ul>
-              <li><input type="radio" name="grid" value="adaptive" checked>Адаптивная</li>
-              <li><input type="radio" name="grid" value="fixed">Фиксированная</li>
-              <li><input type="radio" name="grid" value="flexed">Резиновая</li>
+              <li><label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label></li>
+              <li><label><input type="radio" name="grid" value="fixed">Фиксированная</label></li>
+              <li><label><input type="radio" name="grid" value="flexed">Резиновая</label></li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Особенности</legend>
             <ul>
               <li>
-                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <input type="checkbox" id="slider" name="filter-slider" checked>
                 <label for="slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" name="advantage" id="filter-advantage">
+                <input type="checkbox" id="advantage" name="filter-advantage">
                 <label for="advantage">Преимущества</label>
               </li>
               <li>
-                <input type="checkbox" name="news" id="filter-news" checked>
+                <input type="checkbox" id="news" name="filter-news" checked>
                 <label for="news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" name="gallery" id="filter-gallery">
+                <input type="checkbox" id="gallery" name="filter-gallery">
                 <label for="gallery">Галлерея</label>
               </li>
               <li>
-                <input type="checkbox" name="cart" id="filter-cart">
+                <input type="checkbox" id="cart" name="filter-cart">
                 <label for="cart">Корзина</label>
               </li>
             </ul>
