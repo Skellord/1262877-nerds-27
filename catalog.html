@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Нёрдс - магазин готовых шаблонов</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header>
-      <nav>
+      <nav class="main-navigation">
         <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="">Студия</a></li>
           <li><a href="">Клиенты</a></li>
           <li><a href="">Магазин</a></li>
@@ -16,18 +19,18 @@
           <li><a href="">корзина</a></li>
         </ul>
       </nav>
-      <h1>Магазин готовых шаблонов</h1>
+      <h1 class="catalog-header">Магазин готовых шаблонов</h1>
     </header>
     <main>
-      <section>
-        <form method="POST">
+      <section class="filter">
+        <form action="https://echo.htmlacademy.ru/courses" method="POST" class="filter-form">
           <div>
-            <span>Стоимость</span>
-            <label>От<input type="text" name="minprice"></label> <label>До<input type="text" name="maxprice"></label>
+            <span class="cost">Стоимость</span>
+            <label class="price-cost">От<input type="text" name="minprice"></label> <label class="price-cost">До<input type="text" name="maxprice"></label>
           </div>
           <fieldset>
             <legend>Сетка</legend>
-            <ul>
+            <ul class="grid-list">
               <li><label><input type="radio" name="grid" value="adaptive" checked>Адаптивная</label></li>
               <li><label><input type="radio" name="grid" value="fixed">Фиксированная</label></li>
               <li><label><input type="radio" name="grid" value="flexed">Резиновая</label></li>
@@ -58,17 +61,17 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button type="submit" class="filter-button">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="sort">
         <p>Сортировать</p>
         <a href="">По цене</a>
         <a href="">По типу</a>
         <a href="">По названию</a>
       </section>
       <section>
-        <ul>
+        <ul class="content-list">
           <li><img src="img/img-sedona.jpg" width="360" height="576" alt="Седона"></li>
           <li><img src="img/img-pink.jpg" width="360" height="576" alt="Пинк"></li>
           <li><img src="img/img-barbershop.jpg" width="360" height="576" alt="Барбершоп"></li>
@@ -77,51 +80,51 @@
           <li><img src="img/img-kvast.jpg" width="360" height="576" alt="Квас"></li>
         </ul>
       </section>
-      <section>
-        <ul>
-          <li><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+      <section class="pagination">
+        <ul class="pagination-list">
+          <li class="page-active page-button"><a>1</a></li>
+          <li class="page-button"><a href="#">2</a></li>
+          <li class="page-button"><a href="#">3</a></li>
+          <li class="page-button"><a href="#">Следующая</a></li>
         </ul>
       </section>
     </main>
     <footer>
-      <p>NЁRDS DESIGN STUDIO</p>
-      <p>
+      <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
+      <p class="contacts">
         191186, Санкт-Петербург,<br> 
         ул. Б. Конюшенная, д. 19/8<br>
-        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        <a href="tel:+78122757575" class="tel-number">тел. +7 (812) 275-75-75</a>
       </p>        
-        <a href="#">Напишите нам</a>
+      <a href="#" class="button">Напишите нам</a>
+      <ul class="socials-list">
+        <li><a href="#" class="social-button">Вконтакте</a></li>
+        <li><a href="#" class="social-button">Фейсбук</a></li>
+        <li><a href="#" class="social-button">Инстаграм</a></li>
+      </ul>
       <div>
-        <ul>
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Давайте дружить, это выгодно!</p>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+        <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-    <form method="POST">
-      <button type="button">Закрыть</button>
+    <section class="modal">
       <h2>Напишите нам</h2>
-      <p>
-        <label for="user-name">Ваше имя:</label>
-        <input type="text" name="username" id="user-name" value="" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="user-email">Ваш e-mail:</label>
-        <input type="email" name="useremail" id="user-email" value="" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="user-comment">Текст письма</label>
-        <textarea id="user-comment" name="usercomment" placeholder="В свободной форме"></textarea>
-      </p>
-      <button type="submit">Отправить</button>
-    </form>
+      <button type="button">Закрыть</button>
+      <form method="POST" class="modal-form">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" name="username" id="user-name" value="" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-email">Ваш e-mail:</label>
+          <input type="email" name="useremail" id="user-email" value="" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-comment">Текст письма</label>
+          <textarea id="user-comment" name="usercomment" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
