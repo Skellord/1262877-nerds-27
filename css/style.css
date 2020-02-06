@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/web/roboto.woff2") format("woff2"),
+         url("fonts/web/roboto.woff") format("woff"),
+         url("fonts/web/robotobold.woff2") format ("woff2"),
+         url("fonts/web/robotobold.woff") format("woff"),
+         url("fonts/web/robotomedium.woff2") format("woff2"),
+         url("fonts/web/robotomedium.woff") format("woff");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -31,7 +41,7 @@ a {
     background-color: #d7373b;
 }
 
-.main-navigation {
+.main-nav {
     font-weight: 500;
     line-height: 30px;
     color: #000000;
@@ -198,7 +208,7 @@ a {
 }
 
 
-.catalog-header {
+.title {
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
@@ -230,7 +240,7 @@ a {
     line-height: 20px;
     color: #283136;
 }
-.filter .filter-button {
+.filter .button-grey {
     font: inherit;
     color: #000000;
     font-size: 16px;
@@ -240,10 +250,10 @@ a {
     text-align: center;
     background-color: #eeeeee;
 }
-.filter .filter-button:hover {
+.filter .button-grey:hover {
     background-color: #dfdfdf;
 }
-.filter .filter-button:active {
+.filter .button-grey:active {
     background-color: #d5d5d5;
     color: rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
