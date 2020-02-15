@@ -9,10 +9,8 @@
 }
 /*Основные стили*/
 body {
-    width: 1440px;
     margin: 0;
     padding: 0;
-
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -33,6 +31,13 @@ img {
     max-width: 100%;
     height: auto;
   }
+.wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*Кнопки*/
 .button {
     font-size: inherit;
@@ -43,6 +48,7 @@ img {
     text-transform: uppercase;
     background-color: #fb565a;
     border: none;
+    border-radius: 2px;
 }
 .button:hover{
     background-color: #e74246;
@@ -84,40 +90,22 @@ img {
     box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 /*Навигация*/
+header {
+    background-color: #eeeeee;
+}
 .main-nav {
     display: flex;
-    flex-direction: row;
-    min-height: 132px;
+    padding-top: 49px;
     font-weight: 500;
-    line-height: 30px;
-    color: #000000;
-    background-color: #eeeeee;
     text-transform: uppercase;
-}
-.main-header-logo {
-    margin-top: 49px;
-    margin-left: 140px;
-}
-.main-nav-wrapper{
-    width: 938px;
-    min-height: 83px;
-}
-.container {
-    width: 798px;
-    margin-left: 202px;
-    margin-top: 83px;
-}
-.main-nav-wrapper .container {
-    display: flex;
-    justify-content: space-between;
 }
 .site-navigation {
     display: flex;
-    justify-content: space-between;
-    width: 438px;
-    margin: 0;
-    padding: 0;
+    flex-grow: 1;
     list-style: none;
+    margin: 0;
+    padding-top: 34px;
+    padding-left: 202px;
 }
 .site-navigation a {
     color: #000000;
@@ -131,58 +119,103 @@ img {
 .site-navigation a:focus {
     border-bottom: 2px solid #fb565a;
 }
-.cart-nav {
-    width: 115px;
+.site-navigation li {
+    padding-right:  45px;
+}
+.site-navigation li:last-child{
+    padding-right: 0;
+    margin-left: auto;
+}
+/* Слайдер*/
+.slider-section {
+    background-color: #eeeeee;
+}
+.slider-wrapper {
+    min-height: 413px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/slide-picture.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    -moz-transition: background-image 0.5s ease; 
+    -webkit-transition: background-image 0.5s ease;  
+    -ms-transition: background-image 0.5s ease;  
+    -o-transition: background-image 0.5s ease; 
+    transition: background-image 0.5s ease;
+}
+.slider {
+    position: relative;
+}
+.slider-list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.cart-nav a {
-    color: #000000;
-}
-.cart-nav a:hover {
-    color: #fb565a;
-}
-.cart-nav a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-.cart-nav a:focus {
-    border-bottom: 2px solid #fb565a;
-}
-/*Слайдер*/
-.slider {
-    min-height: 413px;
-    background-color: #eeeeee;
-}
-.slider-slides span{
+.slide-title {
+    position: absolute;
+    top: 67px;
+    max-width: 515px;
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
 }
-.slider-slides p {
+.slide p {
+    position: absolute;
+    top: 200px;
+    max-width: 409px;
     color: #283136;
+    margin: 0;
 }
-.slider-slides .button {
-    margin-left: 140px;
+.slide-button {
+    position: absolute;
+    top: 300px;
+    padding: 16px 53px;
+    vertical-align: top;
+    border-radius: 2px;
 }
-.slide-1 {
-    display: flex;
-    flex-wrap: wrap;
+.slider-controls label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: top;  
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
 }
-.slide-1 .text-container {
-    margin-left: 140px;
-    margin-top: 67px;
+.slider-controls {
+    position: absolute;
+    top: 299px;
+    left: 540px;
+    z-index: 20;
+    font-size: 0;
 }
-.slide-1-img{
-    margin-right: 171px;
-    margin-left: auto;
-    width: 698px;
-    height: 413px;
-    background-image: url("../img/slide-picture.png");
-}
-.slide-2,
-.slide-3 {
+.slide {
     display: none;
+}
+#product-1:checked ~ .slider-wrapper #slide1,
+#product-2:checked ~ .slider-wrapper #slide2,
+#product-3:checked ~ .slider-wrapper #slide3 {
+    display: block;
+}
+#product-1:checked ~ .slider-wrapper label[for="product-1"],
+#product-2:checked ~ .slider-wrapper label[for="product-2"],
+#product-3:checked ~ .slider-wrapper label[for="product-3"] {
+    background-color: #ffffff;
+    background-image: url("../img/active-button.svg");
+    background-position: 50% 50%;
+}
+#product-1:checked ~ .slider-wrapper {
+    background-image: url("../img/slide-picture.png");
+}  
+#product-2:checked ~ .slider-wrapper {
+    background-image: url("../img/slide-picture2.png");
+} 
+#product-3:checked ~ .slider-wrapper {
+    background-image: url("../img/slide-picture3.png");
 }
 /*Продукты компании*/
 .products {
@@ -190,12 +223,11 @@ img {
 }
 .products-list {
     display: flex;
-    justify-content: space-between;
-    padding-left: 140px;
-    padding-right: 200px;
-    
+    flex-wrap: wrap;
     list-style: none;
-
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
 }
 .product-item span {
     font-size: 24px;
@@ -205,12 +237,18 @@ img {
 }
 .product-item p {
     color: #283136;
+    margin: 0;
+    margin-top: 26px;
 }
 .product-item{
-    display: flex;
-    flex-direction: column;
     flex-basis: 300px;
-    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+.product-item .button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 39px;
 }
 .product-1 span::before {
     content: "";
@@ -239,27 +277,23 @@ img {
     background-image: url("../img/advantage-picture-yellow.jpg");
     background-repeat: no-repeat;
 }
-.products::after{
+.products .wrapper::after {
     content: "";
-    margin-top: 80px;
-    display: inline-block;
-    width: 80vw;
-    height: 2px;
-    margin-left: 140px;
+    position: relative;
+    top: 70px;
+    display: block;
     background-color: #eeeeee;
+    height: 2px;
 }
 /*О нас*/
 .features {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     min-height: 525px;
-    padding-left: 140px;
-    padding-right: 140px;
 }
 .features-text {
     width: 650px;
-    margin-top: 80px;
+    padding-top: 80px;
 }
 .slogan {
     font-size: 45px;
@@ -276,13 +310,10 @@ img {
     text-transform: uppercase;
 }
 .features-list {
-    line-height: 45px;
     color: #283136;
     list-style: none;
 }
 .features-deflist{
-    display: flex;
-    flex-direction: column;
     width: 360px;
 }
 .feat-def-slogan::before {
@@ -324,15 +355,18 @@ img {
 /*Проекты*/
 .projects-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+
     align-items: center;
-    margin-top: 76px;
+    margin: 0;
+    padding: 0;
     min-height: 180px;
     list-style: none;
-    margin-left: 140px;
-    padding-right: 183px;
     border-top: 2px solid #eeeeee;
     border-bottom: 2px solid #eeeeee;
+}
+.projects-list li {
+    margin-right: auto;
 }
 .projects-button {
     display: inline-block;
@@ -363,13 +397,6 @@ img {
     margin-left: 31px;
     background-image: url("../img/htmlacdemy-logo.png");
 }
-.list-item-1::after,
-.list-item-2::after,
-.list-item-3::after {
-    content: "";
-    display: block;
-    border-left: 2px solid #eeeeee;
-}
 .project-2 {
     width: 209px;
     height: 90px;
@@ -386,6 +413,9 @@ img {
     background-image: url("../img/mishka-logo.png");
 }
 /*Контакты*/
+footer .wrapper {
+    position: relative;
+}
 .contacts-window{
     position: absolute;
     top: 134px;
@@ -403,6 +433,7 @@ img {
     left: 50px;
 }
 .contacts-title {
+    margin: 0;
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
@@ -416,6 +447,9 @@ img {
     font: inherit;
     color: #666666;
 }
+.contacts .button {
+    padding: 17px 46px;
+}
 /*Футер*/
 footer {
     position: relative;
@@ -427,20 +461,23 @@ footer img {
 }
 .footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 217px;
+    min-height: 217px;
+
+}
+.footer-slogan {
     padding-left: 140px;
-    padding-right: 356px;
 }
 .footer-slogan p:first-child{
     font-size: 36px;
     font-weight: bold;
     line-height: 36px;
+    margin: 0;
 }
 .footer-slogan p:last-child {
-    line-height: 22px;
+
     color: #444444;
+    margin: 0;
 }
 .socials-list {
     display: flex;
@@ -448,7 +485,6 @@ footer img {
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    margin: 0 auto;
     padding: 0;
 }
 .social-link {
