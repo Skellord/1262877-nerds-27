@@ -146,6 +146,17 @@ header {
     -o-transition: background-image 0.5s ease; 
     transition: background-image 0.5s ease;
 }
+.slider-wrapper::before,
+.slider-wrapper::after {
+    content: "";
+    visibility: hidden;
+}
+.slider-wrapper::before {
+    background-image: url("../img/slide-picture2.png");
+}
+.slider-wrapper::after {
+    background-image: url("../img/slide-picture3.png");
+}
 .slider {
     position: relative;
 }
@@ -418,8 +429,7 @@ footer .wrapper {
 }
 .contacts-window{
     position: absolute;
-    top: 134px;
-    left: 140px;
+    top: -364px;
     width: 319px;
     height: 308px;
     padding-left: 50px;
@@ -458,6 +468,12 @@ footer {
 }
 footer img {
     margin-top: 80px;
+}
+.map {
+    margin-top: 80px;
+}
+.inner-page .map {
+    margin-top: 60px;
 }
 .footer-container {
     display: flex;
@@ -507,21 +523,61 @@ footer img {
     opacity: 0.3;
 }
 /*Модальное окно*/
+.modal {
+    display: none;
+    position: fixed;
+    bottom: 180px;
+    left: 50%;
+    margin-left: -480px;
+    padding: 73px 100px;
+    width: 960px;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+    background-color: #ffffff;
+}
+.modal-close {
+    position: absolute;
+    top: 78px;
+    right: 90px;
+    height: 21px;
+    width: 21px;
+    background-color: #ffffff;
+    background-image: url("../img/close-cross.svg");
+    opacity: 0.3;
+    border: 0;
+    cursor: pointer;
+}
 .modal h2 {
+    margin: 0;
     font-size: 45px;
     font-weight: 500;
     line-height: 45px;
 }
+.modal p{
+    margin: 0;
+}
 .modal label {
+    display: block;
+    margin-bottom: 12px;
     font-weight: bold;
     line-height: 18px;
 }
+.half-width {
+   display: flex; 
+   justify-content: space-between;
+   padding-top: 49px;
+   margin-bottom: 36px;
+}
 .modal-form input[type="text"],
 .modal-form input[type="email"] {
+    box-sizing: border-box;
+    width: 360px;
+    padding: 15px 18px;
     font:inherit;
     color: #444444;
     border: 2px solid #d7dcde;
     background-color: #ffffff;
+    border-radius: 2px;
 }
 .modal-form input:hover {
     border: 2px solid #b4b9bb;
@@ -533,7 +589,15 @@ footer img {
     border: 2px solid #e74246;
     color: #e74246; 
 }
+.user-comment input[type="text"] {
+    width: 760px;
+    width: 118px;
+}
 .modal-form textarea {
+    box-sizing: border-box;
+    width: 760px;
+    height: 118px;
+    padding: 15px 15px;
     font: inherit;
     color: #444444;
     border: 2px solid #d7dcde;
@@ -545,23 +609,39 @@ footer img {
 .modal-form textarea:focus {
     border: 2px solid #000000;
 }
+.modal-button {
+    margin-top: 66px;
+    padding: 19px 82px;
+}
 /*Каталог*/
+.inner-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 235px;
+}
 .title {
+    margin: 0;
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
     background-color: #eeeeee;
 }
+.main-container {
+    display: flex;
+}
+.right-container {
+    padding-left: 140px;
+    padding-top: 60px;
+    flex-grow: 1;
+}
 /*Форма фильтра*/
-.filter .cost {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 30px;
-    letter-spacing: 0.18px;
-    text-transform: uppercase;
+.filter {
+    padding-top: 63px;
 }
 .filter fieldset {
     border: none;
+    padding: 0;
 }
 .filter legend {
     font-size: 18px;
@@ -578,19 +658,104 @@ footer img {
     line-height: 20px;
     color: #283136;
 }
+.filter-item {
+    margin: 0;
+    padding: 0;
+}
+.range-filter {
+    width: 260px;
+    margin-top: 49px;
+}
+.filter-item legend {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+.range-controls .scale {
+    height: 2px;  
+    background: #d7dcde;
+}
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+.range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;  
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.range-controls .toggle-min {
+    left: 18px;
+}  
+.range-controls .toggle-max {
+    left: 160px;
+}
+.price-controls {
+    font-size: 0;
+}
+.price-controls label {
+    display: inline-block;
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.price-controls input {
+    width: 60px;
+    padding: 8px 10px;
+    margin-left: 10px;    
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+.max-price {
+    text-align: right;
+}
 /*Сортировка*/
+.sort {
+    display: flex;
+    justify-content: space-between;
+}
 .sort p {
+    margin: 0;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
     text-transform: uppercase;
 }
 .sort a {
+    margin-right: 27px;
     font: inherit;
     font-size: 14px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+}
+.sort a:nth-last-of-type(1) {
+    margin-right: 90px;
 }
 .sort a:hover{
     color: rgba(0, 0, 0, 0.6);
@@ -598,14 +763,53 @@ footer img {
 /*Контент*/
 .content-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-top: 99px;
 }
-/*Пагинация*/
+.content-list li {
+    margin-right: 40px;
+}
+.content-list li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.paginator {
+    min-width: 443px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.paginator a {
+    display: inline-block;
+    min-width: 50px;
+    height: 50px;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font: inherit;
+    font-weight: 500;
+    background-color: #eeeeee;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 16px;
+}
+/*Пагинация
 .pagination-list {
     list-style: none;
+    padding-left: 0;
+}
+.pagination-list li {
+    display: inline-block;
 }
 .page-button a {
-    font: inherit;
+    display: inline-block;
+    min-width: 50px;
+    height: 50px;
+    vertical-align: middle;
     text-align: center;
+    font: inherit;
     font-weight: 500;
     background-color: #eeeeee;
     text-transform: uppercase;
@@ -622,4 +826,4 @@ footer img {
 .page-active a {
     background-color: #ffffff;
     border: 3px solid #dbdbdb;
-}
+}*/
