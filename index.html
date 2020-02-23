@@ -55,8 +55,7 @@
           </div>
        </div>
       </section>
-      <section class="products">
-        <div class="wrapper">
+      <section class="products wrapper">
           <ul class="products-list">
             <li class="product-item product-1">
               <span>Веб-сайты</span>
@@ -74,49 +73,43 @@
               <a href="catalog.html" class="button button-yellow">Заказать</a>
             </li>
           </ul>
-        </div>
       </section>
-      <section>
-        <div class="wrapper">
-          <div class="features">
-            <div class="features-text">
-              <span class="slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</span>
-              <p class="features-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
-                 превыше креатива. Работаем не покладая рук, как роботы.</p>
-              <p class="features-listname">Выполняем заказы на разработку:</p>
-              <ul class="features-list">
-                <li>Веб-сайтов любой сложности</li>
-                <li>Мобильных приложений для iOS и Android</li>
-                <li>Слайдшоу и видео для корпоративных презентаций</li>
-              </ul>
-            </div>
-            <div class="features-deflist">
-              <span class="feat-def-slogan">с 2004 года Любим точность во всем:</span>
-              <table>
-                <tr>
-                  <th>146<span class="percent">%</span></th>
-                  <th>100<span class="percent">%</span></th>
-                  <th>50<span class="percent">%</span></th>
-                </tr>
-                <tr>
-                  <td>Уровень самоотдачи</td>
-                  <td>Соблюдение сроков</td>
-                  <td>Минимальная предоплата</td>
-                </tr>
-              </table>
-            </div>
+      <section class="wrapper features-section">
+        <div class="features">
+          <div class="features-left">
+            <span class="slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</span>
+            <p class="features-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+            <p class="features-listname">Выполняем заказы на разработку:</p>
+            <ul class="features-list">
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
+          <div class="features-right">
+            <span class="feat-def-slogan">с 2004 года Любим точность во всем:</span>
+            <table>
+              <tr>
+                <th>146<sup>%</sup></th>
+                <th>100<sup>%</sup></th>
+                <th>50<sup>%</sup></th>
+              </tr>
+              <tr>
+                <td>Уровень самоотдачи</td>
+                <td>Соблюдение сроков</td>
+                <td>Минимальная предоплата</td>
+              </tr>
+            </table>
           </div>
         </div>
       </section>
-      <section class="projects">
-        <div class="wrapper">
+      <section class="projects wrapper">
         <ul class="projects-list">
           <li class="list-item-1"><a href="https://htmlacademy.ru/intensive/htmlcss" class="projects-button project-1"><span class="visually-hidden">Лого Академии</span></a></li>
           <li class="list-item-2"><a href="" class="projects-button project-2"><span class="visually-hidden">Лого Бординского</span></a></li>
           <li class="list-item-3"><a href="" class="projects-button project-3"><span class="visually-hidden">Лого Пинка</span></a></li>
           <li class="list-item-4"><a href="" class="projects-button project-4"><span class="visually-hidden">Лого Мишки</span></a></li>
         </ul>
-        </div>
       </section>
     </main>
     <footer>
@@ -158,26 +151,26 @@
       </div>
       </div>
     </footer>
-    <!--
     <section class="modal">
       <h2>Напишите нам</h2>
-      <button type="button">Закрыть</button>
+      <button type="button" class="modal-close"><span class="visually-hidden">Закрыть</span></button>
       <form method="POST" class="modal-form">
-        <p>
-          <label for="user-name">Ваше имя:</label>
-          <input type="text" name="username" id="user-name" value="" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="user-email">Ваш e-mail:</label>
-          <input type="email" name="useremail" id="user-email" value="" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="user-comment">Текст письма</label>
-          <textarea id="user-comment" name="usercomment" placeholder="В свободной форме"></textarea>
-        </p>
-        <button type="submit" class="button">Отправить</button>
+        <div class="half-width">
+          <p>
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" name="username" id="user-name" value="" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="email" name="useremail" id="user-email" value="" placeholder="email@example.com">
+          </p>
+        </div>
+          <p>
+            <label for="user-comment">Текст письма</label>
+            <textarea id="user-comment" name="usercomment" placeholder="В свободной форме" required></textarea>
+          </p>
+        <button type="submit" class="button  modal-button">Отправить</button>
       </form>
     </section>
-  -->
   </body>
 </html>

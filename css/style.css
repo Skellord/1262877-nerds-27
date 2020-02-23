@@ -96,6 +96,7 @@ header {
 .main-nav {
     display: flex;
     padding-top: 49px;
+    padding-bottom: 5px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -126,6 +127,20 @@ header {
     padding-right: 0;
     margin-left: auto;
 }
+.cart-nav {
+    position: relative;
+}
+.cart-nav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -41px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/cart-icon.svg");
+    background-repeat: no-repeat;
+}
 /* Слайдер*/
 .slider-section {
     background-color: #eeeeee;
@@ -139,12 +154,8 @@ header {
     margin-right: auto;
     background-image: url(../img/slide-picture.png);
     background-repeat: no-repeat;
-    background-position: top right;
-    -moz-transition: background-image 0.5s ease; 
-    -webkit-transition: background-image 0.5s ease;  
-    -ms-transition: background-image 0.5s ease;  
-    -o-transition: background-image 0.5s ease; 
-    transition: background-image 0.5s ease;
+    background-position-x: 95%;
+    background-position-y: top;
 }
 .slider-wrapper::before,
 .slider-wrapper::after {
@@ -249,7 +260,7 @@ header {
 .product-item p {
     color: #283136;
     margin: 0;
-    margin-top: 26px;
+    padding-top: 26px;
 }
 .product-item{
     flex-basis: 300px;
@@ -261,48 +272,46 @@ header {
     margin-top: 35px;
     padding: 15px 39px;
 }
-.product-1 span::before {
+.product-1::before {
     content: "";
-    display: inline-block;
+    display: block;
     margin-bottom: 30px;
     width: 300px;
     height: 146px;
     background-image: url("../img/advantage-picture-red.jpg");
     background-repeat: no-repeat;
 }
-.product-2 span::before {
+.product-2::before {
     content: "";
-    display: inline-block;
+    display: block;
     margin-bottom: 30px;
     width: 300px;
     height: 146px;
     background-image: url("../img/advantage-picture-green.jpg");
     background-repeat: no-repeat;
 }
-.product-3 span::before{
+.product-3::before{
     content: "";
-    display: inline-block;
+    display: block;
     margin-bottom: 30px;
     width: 300px;
     height: 146px;
     background-image: url("../img/advantage-picture-yellow.jpg");
     background-repeat: no-repeat;
 }
-.products .wrapper::after {
+/*О нас*/
+.features-section::before {
     content: "";
-    position: relative;
-    top: 70px;
     display: block;
     background-color: #eeeeee;
     height: 2px;
 }
-/*О нас*/
 .features {
     display: flex;
     justify-content: space-between;
-    min-height: 525px;
+    padding-bottom: 18px;
 }
-.features-text {
+.features-left {
     width: 650px;
     padding-top: 80px;
 }
@@ -312,24 +321,42 @@ header {
     line-height: 45px;
 }
 .features-description {
-    margin-top: 35px;
+    margin: 0;
+    padding-top: 35px;
     color: #283136;
 }
 .features-listname {
-    margin-top: 47px;
+    margin: 0;
+    padding-top: 47px;
     font-weight: bold;
     text-transform: uppercase;
 }
 .features-list {
+    margin: 0;
+    padding-top: 16px;
     color: #283136;
-    list-style: none;
+    list-style-type: none;
 }
-.features-deflist{
+.features-list li {
+    margin-bottom: 20px;
+    position: relative;
+}
+.features-list li::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: -32px;
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: #fb565a;
+}
+.features-right{
     width: 360px;
 }
-.feat-def-slogan::before {
+.features-right::before {
     content: "";
-    display: inline-block;
+    display: block;
     margin-top: 45px;
     margin-bottom: 40px;
     width: 360px;
@@ -342,35 +369,33 @@ header {
     text-transform: uppercase;
     text-align: center;
 }
-.features-deflist table{
-    margin-top: 18px;
+.features-right table{
+    padding-top: 18px;
     border-spacing: 0 27px;
     width: 360px;
+    line-height: 1;
 }
-.features-deflist th {
+.features-right th {
     height: 45px;
     text-align: left;
     font-size: 45px;
-    line-height: 10px;
     font-weight: bold;
 }
-.features-deflist td {
+.features-right td {
     height: 35px;
     line-height: 18px;
     color: #283136;
 }
-.percent{
-    vertical-align: top;
-    font-size: 24px;
+.features sup{
+    font-size: 28px;
 }
 /*Проекты*/
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 31px;
     min-height: 180px;
     list-style: none;
     border-top: 2px solid #eeeeee;
@@ -378,6 +403,40 @@ header {
 }
 .projects-list li {
     margin-right: auto;
+    position: relative;
+}
+.list-item-1::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    top: 5px;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+}
+.list-item-2::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    top: 16px;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+}
+.list-item-3::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    top: -2px;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+}
+.projects-list li:nth-child(4n) {
+    margin-right: 0;
+}
+.projects-list li:last-child {
+    margin-left: 0;
 }
 .projects-button {
     display: inline-block;
@@ -405,7 +464,6 @@ header {
 .project-1 {
     width: 199px;
     height: 68px;
-    margin-left: 31px;
     background-image: url("../img/htmlacdemy-logo.png");
 }
 .project-2 {
@@ -461,14 +519,6 @@ footer .wrapper {
     padding: 17px 46px;
 }
 /*Футер*/
-footer {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-footer img {
-    margin-top: 80px;
-}
 .map {
     margin-top: 80px;
 }
@@ -479,7 +529,6 @@ footer img {
     display: flex;
     align-items: center;
     min-height: 217px;
-
 }
 .footer-slogan {
     padding-left: 140px;
@@ -491,7 +540,7 @@ footer img {
     margin: 0;
 }
 .footer-slogan p:last-child {
-
+    padding-top: 10px;
     color: #444444;
     margin: 0;
 }
