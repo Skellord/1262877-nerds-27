@@ -8,24 +8,24 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
-    <header>
+    <header class="main-header">
       <div class="wrapper">
-      <nav class="main-nav">
-        <a href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
-        <ul class="site-navigation">
-          <li><a href="">Студия</a></li>
-          <li><a href="">Клиенты</a></li>
-          <li><a href="">Магазин</a></li>
-          <li><a href="">Контакты</a></li>
-          <li><a href="">корзина</a></li>
-        </ul>
-      </nav>
+        <nav class="main-nav">
+          <a href="index.html" class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+          <ul class="site-navigation">
+            <li><a href="">Студия</a></li>
+            <li><a href="">Клиенты</a></li>
+            <li><a href="">Магазин</a></li>
+            <li><a href="">Контакты</a></li>
+            <li><a href="" class="cart-nav">Корзина</a></li>
+          </ul>
+        </nav>
       </div>
       <h1 class="title inner-title">Магазин готовых шаблонов</h1>
     </header>
-    <main class="wrapper main-container">
-      <div class="left-container">
-      <section class="filter">
+    <main>
+      <div class="wrapper catalog-wrapper">
+      <div class="left-container filter">
         <form action="https://echo.htmlacademy.ru/courses" method="POST" class="filter-form">
           <fieldset class="filter-item">
             <legend class="cost">Стоимость</legend>
@@ -43,17 +43,17 @@
               </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="grid">
             <legend>Сетка</legend>
             <ul class="grid-list">
-              <li><label class="grid-radiobutton"><input type="radio" class="visually-hidden" name="grid" value="adaptive" ><span class="radiobutton-indicator"></span>Адаптивная</label></li>
-              <li><label><input type="radio" name="grid" value="fixed">Фиксированная</label></li>
-              <li><label><input type="radio" name="grid" value="flexed">Резиновая</label></li>
+              <li><input id="grid-1" type="radio" name="grid" value="adaptive" checked><label for="grid-1">Адаптивная</label></li>
+              <li><input id="grid-2" type="radio" name="grid" value="fixed"><label for="grid-2">Фиксированная</label></li>
+              <li><input id="grid-3" type="radio" name="grid" value="flexed"><label for="grid-3">Резиновая</label></li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="specials">
             <legend>Особенности</legend>
-            <ul>
+            <ul class="specials-list">
               <li>
                 <input type="checkbox" id="slider" name="filter-slider" checked>
                 <label for="slider">Слайдер</label>
@@ -78,7 +78,6 @@
           </fieldset>
           <button type="submit" class="button button-grey">Показать</button>
         </form>
-      </section>
       </div>
       <div class="right-container">
       <section class="sort">
@@ -114,20 +113,24 @@
         </section>-->
       </section>
       </div>
+      </div>
     </main>
     <footer>
-      <iframe src="https://yandex.ru/map-widget/v1/-/CKaY7Kyy" width="100%" height="416"  allowfullscreen="true" class="map"></iframe>
-      <div class="wrapper">
-        <div class="contacts-window">
-          <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
-          <p class="contacts">
-            191186, Санкт-Петербург,<br> 
-            ул. Б. Конюшенная, д. 19/8<br><br>
-            <a href="tel:+78122757575" class="contacts-link">тел. +7 (812) 275-75-75</a>
-            <a href="#" class="button">Напишите нам</a>
-          </p>
+      <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CKaY7Kyy" width="100%" height="416"  allowfullscreen="true" class="map"></iframe>
+        <div class="wrapper">
+          <div class="contacts-window">
+            <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
+            <p class="contacts">
+              191186, Санкт-Петербург,<br> 
+              ул. Б. Конюшенная, д. 19/8<br><br>
+              <a href="tel:+78122757575" class="contacts-link">тел. +7 (812) 275-75-75</a>
+              <a href="#" class="button">Напишите нам</a>
+            </p>
+          </div>
         </div>
-      <div class="footer-container">
+      </div>
+      <div class="footer-container wrapper">
         <ul class="socials-list">
           <li>
             <a href="#" class="social-link">
@@ -151,7 +154,6 @@
           <p>Давайте дружить, это выгодно!</p>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
-      </div>
       </div>
     </footer>
     <section class="modal">
