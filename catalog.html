@@ -17,8 +17,8 @@
             <li><a href="">Клиенты</a></li>
             <li><a href="">Магазин</a></li>
             <li><a href="">Контакты</a></li>
-            <li><a href="" class="cart-nav">Корзина</a></li>
           </ul>
+          <div class="cart"><a href="" class="cart-nav">Корзина</a></div>
         </nav>
       </div>
       <h1 class="title inner-title">Магазин готовых шаблонов</h1>
@@ -83,34 +83,78 @@
       <section class="sort">
         <p>Сортировать</p>
         <div class="sort-type">
-        <a href="">По цене</a>
+        <a href="" class="active">По цене</a>
         <a href="">По типу</a>
         <a href="">По названию</a>
+        <a href="" class="down-dir active">
+          <span class="visually-hidden">По убыванию</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+        </a>
+        <a href="" class="up-dir">
+          <span class="visually-hidden">По возрастанию</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+        </a>
         </div>
       </section>
       <section>
         <ul class="content-list">
-          <li><img src="img/img-sedona.jpg" width="360" height="576" alt="Седона"></li>
-          <li><img src="img/img-pink.jpg" width="360" height="576" alt="Пинк"></li>
-          <li><img src="img/img-barbershop.jpg" width="360" height="576" alt="Барбершоп"></li>
-          <li><img src="img/img-mishka.jpg" width="360" height="576" alt="Мишка"></li>
-          <li><img src="img/img-aplus.jpg" width="360" height="576" alt="Аплюс"></li>
-          <li><img src="img/img-kvast.jpg" width="360" height="576" alt="Квас"></li>
+          <li class="catalog-item">
+            <img src="img/img-sedona.jpg" width="360" height="576" alt="Седона">
+            <div class="item-window">
+              <a href="#" class="item-name">Sedona</a>
+              <div>Информационный&nbsp;сайт для&nbsp;туристов</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
+          <li class="catalog-item">
+            <img src="img/img-pink.jpg" width="360" height="576" alt="Пинк">
+            <div class="item-window">
+              <a href="#" class="item-name">Pink App</a>
+              <div>Продуктовый&nbsp;лендинг приложения&nbsp;для&nbsp;iOS и Android</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
+          <li class="catalog-item">
+            <img src="img/img-barbershop.jpg" width="360" height="576" alt="Барбершоп">
+            <div class="item-window">
+              <a href="#" class="item-name">Barbershop</a>
+              <div>Сайт&nbsp;салона&nbsp;красоты. Для&nbsp;мужчин,&nbsp;да.</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
+          <li class="catalog-item">
+            <img src="img/img-mishka.jpg" width="360" height="576" alt="Мишка">
+            <div class="item-window">
+              <a href="#" class="item-name">MISHKA</a>
+              <div>Интернет-магазин вязаных&nbsp;игрушек</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
+          <li class="catalog-item">
+            <img src="img/img-aplus.jpg" width="360" height="576" alt="Аплюс">
+            <div class="item-window">
+              <a href="#" class="item-name">A Plus</a>
+              <div>Лендинг&nbsp;курсов&nbsp;повышения квалификации</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
+          <li class="catalog-item">
+            <img src="img/img-kvast.jpg" width="360" height="576" alt="Квас">
+            <div class="item-window">
+              <a href="#" class="item-name">КВАСТ</a>
+              <div>Промо-сайт&nbsp;производителя крафтового&nbsp;кваса</div>
+              <a href="#" class="button catalog-button">9 900 руб.</a>
+            </div>
+          </li>
         </ul>
         <section class="paginator">
-          <a>1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">Следующая</a>
-        </section>
-        <!--<section class="pagination">
-          <ul class="pagination-list">
-            <li class="page-active page-button"><a>1</a></li>
+          <ul class="paginator-list">
+            <li class="page-button page-active"><a>1</a></li>
             <li class="page-button"><a href="#">2</a></li>
             <li class="page-button"><a href="#">3</a></li>
-            <li class="page-button"><a href="#">Следующая</a></li>
+            <li class="page-button next"><a href="#">Следующая</a></li>
           </ul>
-        </section>-->
+        </section>
       </section>
       </div>
       </div>
@@ -125,7 +169,7 @@
               191186, Санкт-Петербург,<br> 
               ул. Б. Конюшенная, д. 19/8<br><br>
               <a href="tel:+78122757575" class="contacts-link">тел. +7 (812) 275-75-75</a>
-              <a href="#" class="button">Напишите нам</a>
+              <a href="#" class="button write-us">Напишите нам</a>
             </p>
           </div>
         </div>
@@ -177,5 +221,6 @@
         <button type="submit" class="button  modal-button">Отправить</button>
       </form>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
