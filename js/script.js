@@ -41,7 +41,7 @@ form.addEventListener ("submit", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error")
+    popup.classList.add("modal-error");
     } else {
         if (isStorageSupport){
         localStorage.setItem("login", login.value);

@@ -501,6 +501,18 @@ header {
     transition: all 0s; 
     opacity: 0.1;
 }
+.project-1 {
+    transform: translate(-14px, 9px);
+}
+.project-2 {
+    transform: translate(-4px, 4px);
+}
+.project-3 {
+    transform: translate(6px, 4px);
+}
+.project-4 {
+    transform: translate(16px, 5px);
+}
 /*Контакты*/
 footer .wrapper {
     position: relative;
@@ -812,7 +824,7 @@ footer .wrapper {
 .range-controls {
     position: relative;
     height: 41px;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
@@ -859,8 +871,8 @@ footer .wrapper {
 }
 .price-controls input {
     width: 60px;
-    padding: 8px 10px;
-    margin-left: 10px;    
+    padding: 9px 10px;
+    margin-left: 8px;    
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     text-align: center;
@@ -868,9 +880,6 @@ footer .wrapper {
     border: none;
     border-radius: 5px;
     background: #f1f1f1;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
 }
 .max-price {
     text-align: right;
@@ -919,13 +928,13 @@ footer .wrapper {
 .grid-list label:disabled::before {
     opacity:0.1;
 }
-.grid-list label:disabled {
+input[type="radio"]:disabled + label {
     opacity:0.3;
 }
 .grid-list input[type="radio"]:checked + label:hover::before{
     opacity:1;
 }
-.grid-list input[type="radio"]:checked + label:disabled::before{
+input[type="radio"]:disabled + ::before {
     opacity:0.1;
 }
 .specials {
@@ -974,14 +983,17 @@ footer .wrapper {
 .specials-list label:disabled::before {
     opacity: 0.1;
 }
-.specials-list label:disabled {
-    opacity: 0.3;
+input[type="checkbox"]:disabled + label {
+    opacity:0.3;
 }
 .specials-list input[type="checkbox"]:checked + label:hover::before{
     opacity: 1;
 }
 .specials-list input[type="checkbox"]:checked + label:disabled::before{
     opacity: 0.1;
+}
+input[type="checkbox"]:disabled + ::before {
+    opacity:0.1;
 }
 .filter .button {
     min-width: 260px;
@@ -1061,7 +1073,7 @@ footer .wrapper {
     left: 0;
     width: 360px;
     height: 231px;
-    padding-top: 35px;
+    padding-top: 31px;
     background-color: #eeeeee;
     text-align: center;
     box-sizing: border-box;
@@ -1080,12 +1092,14 @@ footer .wrapper {
 }
 .item-window div {
     width: 230px;
-    padding-top: 25px;
-    padding-bottom: 30px;
+    max-height: 70px;
+    padding-top: 17px;
     margin: 0 auto;
+    margin-bottom: 32px;
     line-height: 18px;
     color: #666666;
     text-align: center;
+    overflow: auto;
 }
 .catalog-button {
     display: inline-block;
