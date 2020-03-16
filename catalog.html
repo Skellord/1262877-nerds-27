@@ -5,7 +5,7 @@
     <title>Нёрдс - магазин готовых шаблонов</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/compressedStyle.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
     <header class="main-header">
@@ -47,32 +47,32 @@
           <fieldset class="grid">
             <legend>Сетка:</legend>
             <ul class="grid-list">
-              <li><input id="grid-1" type="radio" name="grid" value="adaptive" checked><label for="grid-1">Адаптивная</label></li>
-              <li><input id="grid-2" type="radio" name="grid" value="fixed"><label for="grid-2">Фиксированная</label></li>
-              <li><input id="grid-3" type="radio" name="grid" value="flexed"><label for="grid-3">Резиновая</label></li>
+              <li><input id="grid-1" class="radiobox visually-hidden" type="radio" name="grid" value="adaptive" checked><label for="grid-1">Адаптивная</label></li>
+              <li><input id="grid-2" class="radiobox visually-hidden" type="radio" name="grid" value="fixed"><label for="grid-2">Фиксированная</label></li>
+              <li><input id="grid-3" class="radiobox visually-hidden" type="radio" name="grid" value="flexed"><label for="grid-3">Резиновая</label></li>
             </ul>
           </fieldset>
           <fieldset class="specials">
             <legend>Особенности:</legend>
             <ul class="specials-list">
               <li>
-                <input type="checkbox" id="slider" name="filter-slider" checked>
+                <input class="checkbox visually-hidden" type="checkbox" id="slider" name="filter-slider" checked>
                 <label for="slider">Слайдер</label>
               </li>
               <li>
-                <input type="checkbox" id="advantage" name="filter-advantage">
+                <input class="checkbox visually-hidden" type="checkbox" id="advantage" name="filter-advantage">
                 <label for="advantage">Блок преимуществ</label>
               </li>
               <li>
-                <input type="checkbox" id="news" name="filter-news" checked>
+                <input class="checkbox visually-hidden" type="checkbox" id="news" name="filter-news" checked>
                 <label for="news">Новости</label>
               </li>
               <li>
-                <input type="checkbox" id="gallery" name="filter-gallery">
+                <input class="checkbox visually-hidden" type="checkbox" id="gallery" name="filter-gallery">
                 <label for="gallery">Галерея</label>
               </li>
               <li>
-                <input type="checkbox" id="cart" name="filter-cart">
+                <input class="checkbox visually-hidden" type="checkbox" id="cart" name="filter-cart">
                 <label for="cart">Корзина</label>
               </li>
             </ul>
@@ -166,7 +166,7 @@
       </div>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="map-container">
         <iframe src="https://yandex.ru/map-widget/v1/-/CKaY7Kyy" class="map"></iframe>
         <div class="wrapper">
@@ -222,7 +222,7 @@
         </p>
         </div>
         <p>
-          <label for="user-comment">Текст письма</label>
+          <label for="user-comment">Текст письма:</label>
           <textarea id="user-comment" name="usercomment" placeholder="В свободной форме"></textarea>
         </p>
         <button type="submit" class="button  modal-button">Отправить</button>
