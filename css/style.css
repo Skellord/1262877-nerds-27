@@ -754,6 +754,9 @@ img {
     min-width: 260px;
 }
 /*Каталог*/
+.catalog-main {
+    overflow: hidden;
+}
 .inner-title {
     min-height: 230px;
     padding-top: 65px;
@@ -773,6 +776,7 @@ img {
 .right-container {
     padding-left: 140px;
     padding-top: 55px;
+    overflow: hidden;
 }
 /*Форма фильтра*/
 .filter {
@@ -1149,7 +1153,7 @@ img {
 .page-button:not(.page-active) a:hover{
     background-color: #dfdfdf;
 }
-.page-button:not(.page-active):active{
+.page-button:not(.page-active) a:active{
     background-color: #d5d5d5;
     color: rgba(0, 0, 0, 0.3);
     box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
